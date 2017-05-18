@@ -18,6 +18,7 @@ def main():
         dashes = update_dashes(secret_word, dashes, guess)
         if dashes == secret_word:
             print("CONGRATS U WON")
+	    print "The word was " + secret_word
             done = True
         if guesses_left == 0:
             print("MISSION FAILED WE SHALL GET ZEM NEXT TOIME!")
