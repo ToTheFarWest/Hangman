@@ -18,7 +18,7 @@ def main():
         dashes = update_dashes(secret_word, dashes, guess)
         if dashes == secret_word:
             print("CONGRATS U WON")
-	    print "The word was " + secret_word
+            print("The word was " + secret_word)
             done = True
         if guesses_left == 0:
             print("MISSION FAILED WE SHALL GET ZEM NEXT TOIME!")
@@ -28,22 +28,18 @@ def get_guess(word):
     global wrong
     global guesses_left
     while True:
-        guess = raw_input("Guess: ")
-	if guess.lower()=='debug()':
-	    print word
-	elif guess.lower() == 'exit()':
-	    print 'Exiting...'
-	    global done
-	    done = True
-	    break
+        guess = input("Guess: ")
+        guess = guess.lower()
+        if guess=='debug()':
+            print(word)
         elif len(guess) != 1:
             print("Your guess must have exactly one character!")
         elif not guess.isalpha():
             print("Your guess must be a letter!")
-        elif guess.lower() not in word:
+        elif guess not in word:
             print("That letter is not in the secret word!")
             guesses_left -= 1
-	    wrong.append(guess)
+            wrong.append(guess)
             break
         else:
             print("That letter is in the secret word!")
