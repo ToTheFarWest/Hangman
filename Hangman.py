@@ -1,6 +1,6 @@
 import random
 guesses_left = 10
-words = ["hippocampus", "Trump", "Truman", "Togo", "Domination", "Hitler", "hippopotomonstrosesquippedaliophobia", "Satan", "Freshmen", "Cancer", ]
+words = ["hippocampus", "Trump", "Truman", "Pogo", "Domination", "Hitler", "hippopotomonstrosesquippedaliophobia", "Satan", "Freshmen", "Cancer", ]
 wrong = []
 def main():
     secret_word = random.choice(words)
